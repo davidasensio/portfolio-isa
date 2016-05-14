@@ -32,18 +32,18 @@ jQuery(function ($) {
         event.preventDefault();
     });
 
-    
+
     /* === Collaps mobile menu when click on anchor === */
     $('.navbar-custom a.page-scroll').on('click', function(event) {
         $('.navbar-custom').find('.navbar-collapse').removeClass('in');
     });
 
-    
+
     /* === Home Carousel === */
     $('#tt-carousel').carousel({
-      interval: 5000,
+      interval: 10000,
       pause: "false"
-    })
+  });
 
 
     /* === magnificPopup === */
@@ -127,19 +127,19 @@ jQuery(function ($) {
              if (resp.result === 'success') {
                 $('.subscription-success').html('<i class="fa fa-check"></i>' + resp.msg).fadeIn(1000);
                 $('.subscription-error').fadeOut(500);
-                
+
             } else if(resp.result === 'error') {
                 $('.subscription-error').html('<i class="fa fa-times"></i>' + resp.msg).fadeIn(1000);
-            }  
+            }
         }
 
 $('.mailchimp').ajaxChimp({
             callback: mailchimpCallback,
             //replace bellow url with your own mailchimp form post url inside the url: "---".
             //to learn how to get your own URL, please check documentation file.
-            url: "http://trendytheme.us9.list-manage.com/subscribe/post?u=85ba3666ffb519396fbe64dc5&amp;id=6a5ead803c" 
-        }); 
-        
+            url: "http://trendytheme.us9.list-manage.com/subscribe/post?u=85ba3666ffb519396fbe64dc5&amp;id=6a5ead803c"
+        });
+
     }
 
 
