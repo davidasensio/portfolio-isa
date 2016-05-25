@@ -10,7 +10,7 @@
 
     $email_template = 'simple.html';
 
-    $subject    = '[Portfolio] ' + strip_tags($_POST['subject']);
+    $subject    = strip_tags($_POST['subject']);
     $email       = strip_tags($_POST['email']);
     $phone      = strip_tags($_POST['phone']);
     $name       = strip_tags($_POST['name']);
